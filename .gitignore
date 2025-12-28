@@ -1,19 +1,34 @@
 # 依赖目录
 node_modules/
 **/node_modules/
+jspm_packages/
+web_modules/
+bower_components/
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # 构建输出
 dist/
 build/
 **/dist/
 **/build/
+build/Release
 *.tsbuildinfo
+*.tgz
 
 # 环境变量文件
 .env
+.env.*
+!.env.example
 .env.local
 .env.*.local
 .env.production
@@ -21,12 +36,56 @@ build/
 
 # 日志文件
 logs/
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+# 诊断报告
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# 运行时数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+*.lcov
+lib-cov
+
+# 工具缓存
+.grunt
+.lock-wscript
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+.cache/
+.parcel-cache
+.temp/
+.fusebox/
+.tern-port
+
+# 框架特定
+.next
+out
+.nuxt
+.vuepress/dist
+.vuepress/cache
+.vitepress/dist
+.vitepress/cache
+.docusaurus
+.svelte-kit/
+.serverless/
+.dynamodb/
+.firebase/
+.vscode-test
 
 # 操作系统文件
 .DS_Store
@@ -42,6 +101,8 @@ desktop.ini
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 .idea/
 *.swp
 *.swo
@@ -52,22 +113,9 @@ desktop.ini
 *.sublime-workspace
 *.sublime-project
 
-# 测试覆盖率
-coverage/
-.nyc_output/
-*.lcov
-
 # 临时文件
 *.tmp
 *.temp
-.cache/
-.temp/
-
-# Docker 数据卷（如果需要）
-docker/mysql-data/
-docker/redis-data/
-
-# 其他
 *.local
 *.suo
 *.ntvs*
@@ -75,3 +123,6 @@ docker/redis-data/
 *.sln
 *.sw?
 
+# Docker 数据卷（如果需要）
+docker/mysql-data/
+docker/redis-data/
