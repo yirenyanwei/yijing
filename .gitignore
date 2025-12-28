@@ -1,0 +1,77 @@
+# 依赖目录
+node_modules/
+**/node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 构建输出
+dist/
+build/
+**/dist/
+**/build/
+*.tsbuildinfo
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE 和编辑器
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+*.lcov
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Docker 数据卷（如果需要）
+docker/mysql-data/
+docker/redis-data/
+
+# 其他
+*.local
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
